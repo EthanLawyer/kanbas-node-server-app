@@ -1,7 +1,7 @@
 import "dotenv/config";
 import express from 'express'
 import cors from 'cors'
-import mongoose from 'mongoose'
+// import mongoose from 'mongoose'
 import session from "express-session";
 
 import Hello from "./Hello.js"
@@ -38,8 +38,8 @@ if (process.env.NODE_ENV !== "development") {
 app.use(session(sessionOptions));
 app.use(express.json());
 
-const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas"
-mongoose.connect(CONNECTION_STRING);
+// const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas"
+// mongoose.connect(CONNECTION_STRING);
 
 Lab5(app);
 Hello(app);
